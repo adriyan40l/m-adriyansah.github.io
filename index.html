@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tech Resume - Your Name</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400&display=swap');
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: #0f111a;
+    color: #e0e6f0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .resume-container {
+    max-width: 900px;
+    background: #1b1e2a;
+    border-radius: 12px;
+    box-shadow: 0 0 30px #00ffa8aa;
+    padding: 32px 48px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #00ffa8a8;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.2rem;
+    letter-spacing: 0.15em;
+    margin: 0 0 8px;
+    color: #00f2a8;
+    text-shadow: 0 0 8px #00f2a8;
+  }
+  /* Profile picture below name */
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #00f2a8;
+    box-shadow: 0 0 20px #00f2a8bb;
+    margin: 14px auto 24px;
+    object-fit: cover;
+  }
+  header p {
+    color: #a0d8c9;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 4px 0;
+  }
+  section {
+    margin-top: 32px;
+    border-left: 3px solid #00f2a8;
+    padding-left: 20px;
+    animation: fadeInUp 0.7s ease forwards;
+    opacity: 0;
+  }
+  section:nth-of-type(1) {animation-delay: 0.1s;}
+  section:nth-of-type(2) {animation-delay: 0.3s;}
+  section:nth-of-type(3) {animation-delay: 0.5s;}
+  section:nth-of-type(4) {animation-delay: 0.7s;}
+  section:nth-of-type(5) {animation-delay: 0.9s;}
+
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #00f2a8;
+    text-shadow: 0 0 4px #00f2a8;
+  }
+  .about p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #c1dce9;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  ul.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+  ul.skills-list li {
+    background: #00f2a8;
+    color: #120d07;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 6px 10px 6px 0;
+    padding: 8px 14px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px #00f2a8aa;
+    transition: background-color 0.3s ease;
+    cursor: default;
+  }
+  ul.skills-list li:hover {
+    background: #00d38a;
+    box-shadow: 0 0 14px #00d38acc;
+  }
+  .job, .education-item, .project {
+    margin-bottom: 16px;
+  }
+  .job h3, .education-item h3, .project h3 {
+    margin: 0 0 4px;
+    font-weight: 700;
+    color: #70ffc9;
+  }
+  .job span, .education-item span, .project span {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #6ecf9d;
+  }
+  .job p, .project p {
+    margin: 6px 0 0;
+    color: #cee7d6;
+  }
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    border-top: 2px solid #00ffa8a8;
+    padding-top: 12px;
+    color: #4ade80;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  footer a {
+    color: #4ade80;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  footer a:hover {
+    color: #32cd99;
+  }
+  /* IT images container style */
+  .it-images {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 12px;
+  }
+  .it-images img {
+    border-radius: 12px;
+    box-shadow: 0 0 14px #00f2a8aa;
+    width: calc(33% - 12px);
+    height: 120px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  .it-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 26px #00f2a8cc;
+  }
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 720px) {
+    .it-images img {
+      width: 100%;
+      height: 180px;
+    }
+    ul.skills-list {
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="resume-container" role="main">
+  <header>
+    <h1>Muhamad Adriyansah</h1>
+    <img class="profile-pic" src="https://images.unsplash.com/photo-1747701375824-2f3a8a369095?q=80&w=1984&auto=format&fit=crop&ixlib" alt="Profile picture of Your Name" />
+    <p>IT Support | Tech Enthusiast | Network Enginer</p>
+    <p>aldimadara2@gmail.com | +62 838 1707 2264 | Bandung, West Java</p>
+  </header>
+
+  <section class="about" aria-label="About me">
+    <h2>About Me</h2>
+    <p>I'm a IT Support or IT Technician with expertise in repairing computer, network and managing cost to performance for project laboratory computer.</p>
+    <div class="it-images" aria-label="Technology themed images">
+      <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;h=300&amp;q=80" alt="Computer screen with code" />
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;h=300&amp;q=80" alt="Closeup of laptop keyboard and hands typing" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;h=300&amp;q=80" alt="Server racks and technology infrastructure" />
+    </div>
+  </section>
+
+  <section class="skills" aria-label="Skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Repairing Hardware & Software</li>
+      <li>IT Managing</li>
+      <li>Computer Networking</li>
+      <li>MS Office</li>
+      <li>QA manual</li>
+      <li>Linux server</li>
+      <li>Windows XP - 11</li>
+      <li>Editing Video & Image</li>
+      <li>Mikrotik</li>
+      <li>Cisco</li>
+          </ul>
+  </section>
+
+  <section class="experience" aria-label="Work experience">
+    <h2>Work Experience</h2>
+    <div class="job">
+      <h3>Internship UPI</h3>
+      <span>3 months Internship as IT Support | 2018 </span>
+      <p>Troubleshooting network & Managing Installation PC Lab.</p>
+    </div>
+    <div class="job">
+      <h3>DComp </h3>
+      <span>The Only One Owner & Worker | 2019 - 2020</span>
+      <p>Repair PC / Laptop customer</p>
+    </div>
+    <div class="job">
+      <h3>IT Support DIGITECH University </h3>
+      <span>Team Lead IT Support | 2021 - 2022</span>
+      <p>Leading Projects of Lab. Computer; Creating, Maintain Troubleshooting Computer or network</p>
+    </div>
+  </section>
+
+  <section class="education" aria-label="Education">
+    <h2>Education</h2>
+    <div class="education-item">
+      <h3>1 Katapang State Vocational High School (SMKN 1 Katapang)</h3>
+      <span>Computer and Network Engineering (TKJ) | 2019</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>Connect with me:</p>
+    <a href="https://wa.me/6283817072264" target="_blank" rel="noopener">Whatsapp</a>
+    <a href="https://www.linkedin.com/in/muhamad-adriyansah-068657210/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:aldimadara2@gmail.com" target="_blank" rel="noopener">Email</a>
+  </footer>
+</div>
+</body>
+</html>
+
